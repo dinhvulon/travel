@@ -1,0 +1,459 @@
+/*===== GOOGLE FONTS =====*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+    --header-height: 3rem;
+    /*========== Colors ==========*/
+    --first-color: #26A69A;
+    --first-color-lighter: #ECF3F2;
+    --title-color: #11443F;
+    --text-color: #5B7B78;
+    --body-color: #F5FFFE;
+    /*========== Font and typography ==========*/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 3rem;
+    --big-font-size: 1.25rem;
+    --normal-font-size: .938rem;
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+@media only screen and (min-width:1024px) {
+     :root {
+        --biggest-font-size: 5.5rem;
+        --big-font-size: 2rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+
+/* ========BASE============= */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,
+h2,
+ul,
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*================LAYOUT===================== */
+
+.main {
+    position: relative;
+}
+
+.bd-container {
+    max-width: 968px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+
+/* =================HEADER==================== */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+
+
+/*=================NAV===================== */
+
+.nav {
+    max-width: 968px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* =====responsive mobile max width 768px========== */
+
+@media screen and (max-width:767px) {
+    .nav__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 1.5rem;
+        background-color: #12cbb0e3;
+        border-radius: 1rem;
+        transition: 0.4s;
+    }
+}
+
+.nav__logo,
+.nav__toggle,
+.nav__link {
+    color: #fff;
+}
+
+.nav__logo:hover,
+.nav__toggle:hover,
+.nav__link:hover {
+    opacity: 0.6;
+}
+
+.nav__link {
+    font-weight: var(--font-medium);
+}
+
+.nav__item {
+    margin-bottom: 1.5rem;
+}
+
+.nav__toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+/* ============SHOW MENU==================== */
+
+.show-menu {
+    top: calc(var(--header-height) + 1rem)
+}
+
+
+/*=============INDANANG=================*/
+
+.main-isdanang {
+    height: 100vh;
+    position: relative;
+}
+
+.main-isdanang__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.isdanang__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.5fr 0.25fr;
+    align-content: center;
+    height: 100%;
+}
+
+.isdanang__subtitle,
+.isdanang__title,
+.isdanang__description {
+    color: var(--first-color-lighter);
+}
+
+.isdanang__subtitle {
+    font-size: var(--big-font-size);
+    font-weight: var(--font-medium);
+}
+
+.isdanang__title {
+    font-size: var(--biggest-font-size);
+}
+
+.isdanang__description {
+    margin-bottom: 1rem;
+}
+
+.isdanang__button {
+    display: inline-block;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--first-color-lighter);
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+    align-items: center;
+}
+
+.isdanang__button:hover {
+    background-color: var(--body-color)
+}
+
+.isDanang__button-icon {
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+
+/* ==========css play youtube============== */
+
+.isdanang__video {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0.75rem;
+}
+
+.isdanang__video-content {
+    position: relative;
+    display: inline-flex;
+    padding: .15rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.isdanang__video-icon {
+    font-size: 1.8rem;
+    color: #0c0b0b;
+    position: relative;
+    z-index: 100;
+}
+
+.isdanang__video-content::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 48%;
+    top: 48%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #fafd33;
+    opacity: 0.6;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+.isdanang__video-content::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 48%;
+    top: 48%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: #fafd33;
+    opacity: 0.6;
+    border-radius: 50%;
+    transition: all 200ms;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.isdanang__popop-close {
+    position: absolute;
+    top: -0.75rem;
+    right: -0.75rem;
+    display: inline-flex;
+    padding: 0.35rem;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--first-color);
+    color: var(--first-color-lighter);
+    z-index: 2;
+}
+
+
+/* ================modal======================== */
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    display: block;
+    animation: fageIn linear 0.3s;
+    display: none;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.modal__body {
+    max-width: 40rem;
+    width: 100%;
+    background-color: #fff;
+    margin: auto;
+    z-index: 1;
+}
+
+@keyframes fageIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.isdannag__popop {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #006659;
+    border-radius: 1rem;
+}
+
+.show-popop {
+    display: block !important;
+}
+
+
+/* =========show popop ===============*/
+
+
+/* =========controls=========== */
+
+.controls__container-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.controls {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.25rem 0.5rem;
+    background-color: var(--first-color-lighter);
+    border-radius: 0.75rem;
+    z-index: var(--z-tooltip);
+    overflow: hidden;
+}
+
+.controls__container {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.isdanang__popop-video {
+    max-width: 40rem;
+    width: 100%;
+}
+
+
+/* ====swiper acive==== */
+
+.swiper-slide-thumb-active {
+    width: 45px;
+    height: 45px
+}
+
+
+/*===== media mobile max width 414px;====== */
+
+@media only screen and (max-width:414px) {
+    .controls {
+        width: 10rem;
+    }
+    iframe {
+        max-width: 14rem !important;
+        max-height: 10rem !important;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+        margin: 0 auto;
+    }
+    .nav__list {
+        display: flex;
+    }
+    .nav__item {
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+    .nav__link {
+        color: var(--first-color-lighter);
+    }
+    .nav__toggle {
+        display: none;
+    }
+    .isdanang__container {
+        grid-template-columns: 1fr 1fr;
+    }
+    .isdanang__description {
+        padding-right: 5rem;
+        margin-bottom: 2rem;
+    }
+    .isdanang__video {
+        align-items: center;
+        justify-content: center;
+    }
+    .isdanang__popop-video {
+        width: 40rem;
+        height: 30rem;
+    }
+}
+
+@media screen and (min-width:1024) {
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .isdanang__description {
+        padding-right: 11rem;
+    }
+}

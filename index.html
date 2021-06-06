@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--========== BOX ICONS ==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--========== SWIPER CSS ==========-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+    <!--========== CSS ==========-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Responsive Landing Page Islands</title>
+</head>
+
+<body>
+    <!--========== HEADER ==========-->
+    <header class="header">
+        <nav class="nav bd-container">
+            <a href="#" class="nav__logo">Travel</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Explore</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Destinations</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Hotels</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--========== MAIN ==========-->
+    <main class="main">
+        <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper">
+                <section class="main-isdanang swiper-slide ">
+                    <img src="assets/img/mykhe.jpg" alt="danangimg" class="main-isdanang__img">
+                    <div class="isdanang__container bd-container">
+                        <div class="isdanang__data">
+                            <h2 class="isdanang__subtitle">DA NANG</h2>
+                            <h1 class="isdanang__title">MY KHE BEACH</h1>
+                            <p class="isdanang__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="isdanang__button">Explore<i class='bx bx-right-arrow-alt isDanang__button-icon'></i></a>
+                        </div>
+                        <div class="isdanang__video">
+                            <div class="isdanang__video-content">
+                                <i class='bx bx-play isdanang__video-icon'></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="main-isdanang swiper-slide">
+                    <img src="assets/img/linhung.jpg" alt="danangimg" class="main-isdanang__img">
+                    <div class="isdanang__container bd-container">
+                        <div class="isdanang__data">
+                            <h2 class="isdanang__subtitle">DA NANG</h2>
+                            <h1 class="isdanang__title">LINH UNG PAGODA</h1>
+                            <p class="isdanang__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="isdanang__button">Explore<i class='bx bx-right-arrow-alt isDanang__button-icon'></i></a>
+                        </div>
+                        <div class="isdanang__video">
+                            <div class="isdanang__video-content">
+                                <i class='bx bx-play isdanang__video-icon'></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                <section class="main-isdanang swiper-slide">
+                    <img src="assets/img/bana.jpg" alt="danangimg" class="main-isdanang__img">
+                    <div class="isdanang__container bd-container">
+                        <div class="isdanang__data">
+                            <h2 class="isdanang__subtitle">DA NANG</h2>
+                            <h1 class="isdanang__title">BA NA HILL</h1>
+                            <p class="isdanang__description">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <a href="#" class="isdanang__button">Explore<i class='bx bx-right-arrow-alt isDanang__button-icon'></i></a>
+                        </div>
+                        <div class="isdanang__video">
+                            <div class="isdanang__video-content">
+                                <i class='bx bx-play isdanang__video-icon'></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="modal" id="modal">
+                    <div class="modal__overlay">
+                        <div class="modal__body">
+                            <div class="isdannag__popop" id="popop">
+                                <div class="isdanang__popop-close" id="popop-close">
+                                    <i class='bx bx-x'></i>
+                                </div>
+                                <iframe class="isdanang__popop-video" src="https://www.youtube.com/embed/b3Ysjcmpqg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--======== CONTROLS============ -->
+        <div class="controls gallery-thumbs ">
+            <div class="controls__container swiper-wrapper">
+                <img src="assets/img/mykhe.jpg" alt="" class="controls__container-img swiper-slide">
+                <img src="assets/img/linhung.jpg" alt="" class="controls__container-img swiper-slide">
+                <img src="assets/img/bana.jpg" alt="" class="controls__container-img swiper-slide">
+            </div>
+        </div>
+    </main>
+
+
+
+    <!--========== GSAP ==========-->
+    <script src=" assets/js/gsap.min.js "></script>
+
+    <!--========== SWIPER JS ==========-->
+    <script src="assets/js/swiper-bundle.min.js "></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="assets/js/main.js "></script>
+</body>
+
+</html>
